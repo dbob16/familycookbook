@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="pagebody">
+{{ .Content }}
+</div>
+<div class="taglist">
+<ul id="tags">
+{{ range .Site.Taxonomies.tags.Alphabetical }}
+<li><a href="{{ .Page.Permalink }}">{{ .Term }}</a></li>
+{{ end }}
+</ul>
+</div>
+{{ end }}

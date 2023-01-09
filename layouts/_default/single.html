@@ -1,0 +1,11 @@
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="pageheader">
+<h1>{{ .Title }}</h1>
+</div>
+<div class="pagebody">
+{{ .Content }}
+</div>
+{{ end }}

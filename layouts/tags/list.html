@@ -1,0 +1,19 @@
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="pageheader">
+<h1>{{ .Title }}</h1>
+</div>
+<div class="pagebody">
+<p>This is a list of the content tagged "{{ .Title }}."</p>
+{{ .Content }}
+</div>
+<div class="pagelist">
+<ul>
+{{ range .RegularPages }}
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+</div>
+{{ end }}
